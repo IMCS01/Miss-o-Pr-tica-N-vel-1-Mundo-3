@@ -12,7 +12,6 @@ public class CadastroPOO {
         PessoaJuridicaRepo repoJuridica = new PessoaJuridicaRepo();
 
         while (true) {
-            // Exibe o menu interativo
             System.out.println("\n=========================");
             System.out.println("1. Incluir Pessoa");
             System.out.println("2. Alterar Pessoa");
@@ -24,7 +23,7 @@ public class CadastroPOO {
             System.out.println("0. Finalizar Programa");
             System.out.print("=========================\n");
             int opcao = scanner.nextInt();
-            scanner.nextLine(); // Consumir a quebra de linha
+            scanner.nextLine();
 
             if (opcao == 0) {
                 System.out.println("Encerrando o programa...");
@@ -46,11 +45,10 @@ public class CadastroPOO {
         scanner.close();
     }
 
-    // Função para Incluir novo registro
     private static void incluir(Scanner scanner, PessoaFisicaRepo repoFisica, PessoaJuridicaRepo repoJuridica) {
         System.out.print("Incluir (1 - Fisica, 2 - Juridica): ");
         int tipo = scanner.nextInt();
-        scanner.nextLine(); // Consumir a quebra de linha
+        scanner.nextLine();
 
         if (tipo == 1) {
             System.out.print("Digite o ID: ");
@@ -79,7 +77,6 @@ public class CadastroPOO {
         }
     }
 
-    // Função para Alterar dados
     private static void alterar(Scanner scanner, PessoaFisicaRepo repoFisica, PessoaJuridicaRepo repoJuridica) {
         System.out.print("Alterar (1 - Fisica, 2 - Juridica): ");
         int tipo = scanner.nextInt();
@@ -124,7 +121,6 @@ public class CadastroPOO {
         }
     }
 
-    // Função para Excluir dados
     private static void excluir(Scanner scanner, PessoaFisicaRepo repoFisica, PessoaJuridicaRepo repoJuridica) {
         System.out.print("Excluir (1 - Fisica, 2 - Juridica): ");
         int tipo = scanner.nextInt();
@@ -140,7 +136,6 @@ public class CadastroPOO {
         }
     }
 
-    // Função para Exibir dados por ID
     private static void exibirPorId(Scanner scanner, PessoaFisicaRepo repoFisica, PessoaJuridicaRepo repoJuridica) {
         System.out.print("Exibir pelo ID (1 - Fisica, 2 - Juridica): ");
         int tipo = scanner.nextInt();
@@ -160,7 +155,6 @@ public class CadastroPOO {
         }
     }
 
-    // Função para Exibir todos os dados
     private static void exibirTodos(Scanner scanner, PessoaFisicaRepo repoFisica, PessoaJuridicaRepo repoJuridica) {
         System.out.print("Exibir todos (1 - Fisica, 2 - Juridica): ");
         int tipo = scanner.nextInt();
@@ -178,7 +172,6 @@ public class CadastroPOO {
         }
     }
 
-    // Função para Salvar os dados em arquivos binários
     private static void salvarDados(Scanner scanner, PessoaFisicaRepo repoFisica, PessoaJuridicaRepo repoJuridica) {
         System.out.print("Prefixo do arquivo: ");
         String prefixo = scanner.next();
@@ -191,7 +184,6 @@ public class CadastroPOO {
         }
     }
 
-    // Função para Recuperar os dados de arquivos binários
     private static void recuperarDados(Scanner scanner, PessoaFisicaRepo repoFisica, PessoaJuridicaRepo repoJuridica) {
         System.out.print("Prefixo do arquivo: ");
         String prefixo = scanner.next();
